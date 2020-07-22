@@ -68,6 +68,7 @@ footer a:hover {
 }
 
 h2 {
+  font-family: "Playfair Display", serif;
   font-size: 4.5rem;
   font-weight: 500;
   line-height: 110%;
@@ -146,18 +147,19 @@ footer ul li {
 }
 
 .content {
-  padding: 1rem 4rem;
-  flex: 0 1 calc(50% - 5rem);
+  flex: 0 1 calc(50% - 4vw);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .left {
+  padding: 1em 1em 1em 5vw;
   text-align: left;
 }
 
 .right {
+  padding: 1em 5vw 1em 1em;
   text-align: center;
 }
 
@@ -175,20 +177,38 @@ footer ul li {
 }
 
 input {
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 1em;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
   padding: 1em;
   border: none;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.1);
   position: relative;
+  color: var(--main-white);
 }
 
 input::placeholder {
-  color: var(--main-white);
+  color: var(--main-grey);
 }
 
 input:focus {
   outline: none;
+  box-shadow: 0 0 5px var(--main-blue);
+}
+
+.password {
+  width: 100%;
+  position: relative;
+}
+.password-icon {
+  width: 1.2rem;
+  position: absolute;
+  right: 2rem;
+  top: calc(50% - 0.3rem);
+}
+.password-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 button {
@@ -227,6 +247,10 @@ button:hover {
     font-size: 1.25rem;
   }
 
+  h6 {
+    font-size: 0.72rem;
+  }
+
   .navbar-middle {
     display: none;
   }
@@ -239,6 +263,9 @@ button:hover {
   .content {
     flex: 0 1 100%;
     text-align: center;
+  }
+  input {
+    font-size: 0.72rem;
   }
 
   footer {

@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
@@ -52,12 +56,10 @@
         <form action="POST" class="signup-form">
           <input type="text" required placeholder="name" />
           <input type="email" required placeholder="email" />
-          <input
-            type="password"
-            required
-            placeholder="password"
-            class="password"
-          />
+          <div class="password">
+            <input type="password" required placeholder="password" />
+            <img class="password-icon" src="assets/Icon.png" alt="icon" />
+          </div>
           <button class="btn btn-signup">Sign Up ></button>
         </form>
 
