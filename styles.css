@@ -108,7 +108,9 @@ nav li {
 
 .collapse {
   display: none;
-  position: absolute;
+  padding: 0 3rem;
+  text-align: right;
+  width: 100vw;
 }
 
 .navbar-right:hover {
