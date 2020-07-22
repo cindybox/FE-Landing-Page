@@ -139,7 +139,7 @@ footer ul li {
 /* content container setting */
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10% 8%;
   min-height: calc(100vh - 50px);
@@ -229,6 +229,7 @@ button:hover {
 
   .container {
     flex-direction: column;
+    justify-content: center;
   }
 
   .content {
