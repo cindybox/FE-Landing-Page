@@ -12,12 +12,17 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  margin: 0 auto;
+  margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--main-white);
   position: relative;
-  height: 100%;
+  min-height: 100%;
 }
 
 body:before {
@@ -124,8 +129,8 @@ nav li {
 footer {
   font-size: 0.72rem;
   width: 100%;
-  position: relative;
-  margin-bottom: -10rem;
+  height: 50px;
+  margin-bottom: -50px;
 }
 
 footer ul li {
@@ -134,14 +139,14 @@ footer ul li {
 /* content container setting */
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10% 8%;
-  height: 100%;
+  min-height: calc(100vh - 50px);
 }
 
 .content {
-  padding: 1rem 0;
+  padding: 1rem 4rem;
   flex: 0 1 calc(50% - 5rem);
   display: flex;
   flex-direction: column;
@@ -231,9 +236,15 @@ button:hover {
     text-align: center;
   }
 
+  footer {
+    height: 10rem;
+    margin-bottom: -10rem;
+  }
+
   footer,
   footer ul {
     flex-direction: column;
+    justify-content: center;
   }
 
   footer ul {
@@ -241,9 +252,9 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 1119px) {
+@media screen and (max-width: 1200px) {
   h2 {
-    font-size: calc(30px + 7 * (1vw - 5px));
+    font-size: min(72px, calc(30px + 5.6 * (1vw - 5px)));
   }
 
   nav li a {
@@ -257,7 +268,7 @@ button:hover {
 
 @media screen and (min-width: 1200px) {
   h2 {
-    font-size: 72px;
+    font-size: min(72px, calc(30px + 5.6 * (1vw - 5px)));
   }
 
   h5 {
